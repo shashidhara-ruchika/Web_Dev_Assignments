@@ -1,6 +1,6 @@
-# HTML Tags Used
+# Ruchika Shashidhara NU ID: 002245068
 
-Quick reference for the list of tags used
+# HTML Tags Used
 
 ## Document Structure
 
