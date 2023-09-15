@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Works</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/favicon.jpg" rel="icon" type="image/x-icon" />
+    <script>
+      function audioplay() {
+        var myAudio = document.getElementById("audioclip");
+        if (myAudio.paused) {
+          myAudio.play();
+        } else {
+          myAudio.pause();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="page">
+        <div class="header">
+          <div class="header-section">
+            <header><h1>Interior Works</h1></header>
+          </div>
+          <menu>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reachout.html">Reach Out</a></li>
+            <li><a href="citation.html">Citation</a></li>
+          </menu>
+        </div>
+        <div class="content">
+          <div class="left-panel">
+            <div class="left-panel-content">
+              <h2 class="title">About Us</h2>
+              <br />
+              <p>
+                Welcome to Interior Works, where creativity meets functionality
+                to transform spaces into extraordinary environments. With a
+                passion for aesthetics and an eye for detail, we are your go-to
+                interior design experts. At Interior Works, we specialize in
+                crafting bespoke interiors that reflect your unique style and
+                personality. Our team of experienced designers is dedicated to
+                bringing your vision to life, ensuring that every element
+                harmoniously blends to create a captivating atmosphere. From
+                residential retreats to commercial masterpieces, we take pride
+                in delivering exceptional design solutions. Our commitment to
+                quality, innovation, and client satisfaction sets us apart. With
+                a finger on the pulse of the latest design trends and a
+                commitment to sustainability, we create spaces that not only
+                look stunning but also function seamlessly. Explore our
+                portfolio to witness our design prowess, and let's collaborate
+                to turn your interior aspirations into reality. Welcome to a
+                world of inspired interiors with Interior Works.
+              </p>
+              <br />
+              <div class="video-container">
+                <video muted autoplay loop>
+                  <source src="assets/video.mp4" type="video/mp4" />
+                </video>
+                <br /><br />
+                <audio
+                  src="assets/audio.mp3"
+                  autoplay
+                  loop
+                  id="audioclip"
+                ></audio>
+                <button type="button" onClick="audioplay()">
+                  Play/Pause Audio
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="right-panel">
+            <div class="right-panel-content">
+              <h3>Pricing</h3>
+              <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>Basic</th>
+                    <th>Stanard</th>
+                    <th>Premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Requires Support</td>
+                    <td>Requires Support</td>
+                    <td>Full Support</td>
+                  </tr>
+                  <tr>
+                    <td>No Exterior Changes</td>
+                    <td>With Exterior Changes</td>
+                    <td>With Exterior Changes</td>
+                  </tr>
+                  <tr>
+                    <td>$1400</td>
+                    <td>$1700</td>
+                    <td>$2400</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <details>
+                <summary>Our Skills & Techniques</summary>
+                <br />
+                <p>
+                  We involve the skills for spatial planning, color
+                  coordination, and furniture selection to create functional and
+                  aesthetically pleasing spaces. And also use techniques to
+                  encompass creating focal points, incorporating lighting for
+                  ambiance, and utilizing textures for tactile richness.
+                </p>
+              </details>
+              <br />
+              <h3>Contact Information</h3>
+              <br />
+              <p>Phone: <a href="tel:+4733378901">+1 879 879 657</a></p>
+              <br />
+              <p>
+                Email:
+                <a href="mailto:shashidhara.r@northeastern.edu"
+                  >shashidhara.r@northeastern.edu</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>Interior Works @ Northeastern University</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

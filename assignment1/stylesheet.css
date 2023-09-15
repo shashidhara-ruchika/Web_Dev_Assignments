@@ -1,0 +1,327 @@
+/* Basic reset and general styles */
+body {
+  background-color: #edede3;
+  color: #373737;
+  font-family: Bodoni, Helvetica, Verdana, sans-serif;
+  font-size: 12px;
+  margin: 30px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Links and hover styles */
+a {
+  color: #035976;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #035976;
+  text-decoration: none;
+}
+
+/* Main layout */
+.main {
+  margin: 0px auto;
+  width: 840px;
+}
+
+.page {
+  background-color: #ffffff;
+  float: left;
+  padding: 20px;
+  width: 800px;
+  margin-bottom: 30px;
+}
+
+.header {
+  float: left;
+  width: 800px;
+}
+
+/* Header styles */
+.header-section {
+  background-image: url(assets/image_header.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  float: left;
+  height: 250px;
+  text-align: center;
+  width: 800px;
+}
+
+.header-section h1 {
+  color: #000000;
+  font-family: Bodoni, Helvetica, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 100%;
+  margin-right: 72px;
+  margin-top: 100px;
+}
+
+/* Menu styles */
+menu {
+  background-color: #000000;
+  float: left;
+  height: 50px;
+  width: 800px;
+  padding-left: 0px;
+}
+
+menu li {
+  list-style-type: none;
+  display: inline;
+}
+
+menu li.active a {
+  color: #4cc7f4;
+}
+
+menu li a {
+  color: #ffffff;
+  font-family: Bodoni, Helvetica, Verdana, sans-serif;
+  font-size: 13px;
+  line-height: 51px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration: none;
+}
+
+menu li a:hover {
+  color: #4cc7f4;
+}
+
+/* Content layout */
+.content {
+  float: left;
+  width: 800px;
+}
+
+/* Left panel styles */
+.left-panel {
+  float: left;
+  padding: 20px 50px 20px 10px;
+  width: 480px;
+}
+
+.left-panel-content {
+  clear: both;
+  text-align: justify;
+}
+
+/* Content table styles */
+.content-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin: 25px 0;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #d9d5d5;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #000000;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table thead tr {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Title and summary styles */
+.title {
+  color: #035c7a;
+  font-size: 18px;
+  font-weight: normal;
+  padding-bottom: 3px;
+}
+
+summary {
+  color: #035c7a;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Right panel styles */
+.right-panel {
+  float: right;
+  width: 250px;
+}
+
+.right-panel-content {
+  clear: both;
+}
+
+.right-panel-content h3 {
+  color: #346397;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  margin-left: 3px;
+  margin-top: 12px;
+}
+
+.right-panel-in ul {
+  list-style-type: none;
+}
+
+.right-panel-in ul li {
+  border-bottom-color: #d1cfcf;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.right-panel-in ul li a {
+  color: #01376d;
+  text-decoration: none;
+}
+
+.right-panel-in ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000000;
+  float: left;
+  height: 55px;
+  width: 800px;
+}
+
+footer p {
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Image gallery styles */
+.image-gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+figure {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: 0 0 5px #000000;
+  text-align: center;
+}
+
+figure:hover {
+  transform: scale(1.2);
+}
+
+img {
+  height: 120px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+figcaption {
+  padding: 10px;
+}
+
+figcaption p {
+  font-weight: bold;
+}
+
+/* Form input and button styles */
+input[type="text"],
+select,
+textarea {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  margin-top: 6px;
+  padding: 12px;
+  resize: vertical;
+  width: 100%;
+}
+
+button {
+  background-color: #063462;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+button:hover {
+  background-color: #035976;
+}
+
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-container button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Reach-out container styles */
+.reach-out-container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Video styles */
+.left-panel-content video {
+  width: 100%;
+}
+
+.citation ul li {
+  list-style: none;
+  position: relative;
+  padding: 3px 0 2px 25px;
+}
+
+.citation ul li::before {
+  content: "*";
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+/* .citation ul {
+  line-height: 1.5em;
+  margin: 5px 0 15px;
+  padding: 0;
+}
+
+.citation li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 20px;
+}
+     */

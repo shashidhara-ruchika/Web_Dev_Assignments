@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Works</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/favicon.jpg" rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="page">
+        <div class="header">
+          <div class="header-section">
+            <header><h1>Interior Works</h1></header>
+          </div>
+          <menu>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li class="active"><a href="reachout.html">Reach Out</a></li>
+            <li><a href="citation.html">Citation</a></li>
+          </menu>
+        </div>
+        <div class="content">
+          <div class="reach-out-container">
+            <form action="submit.php">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Your email"
+              />
+
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+              </select>
+
+              <label for="content">Reach out to us about</label>
+              <textarea
+                id="content"
+                name="content"
+                placeholder="Reach out"
+                style="height: 100px"
+              ></textarea>
+              <button class="button" type="submit">Submit</button>
+            </form>
+          </div>
+          <br />
+        </div>
+        <footer>
+          <p>Interior Works @ Northeastern University</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
