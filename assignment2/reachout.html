@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="assets/icons/icon.png" rel="icon" type="image/x-icon" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="c1">
+        <div class="card-content">
+          <img class="float-img" src="assets/avatar.jpg" alt="Avatar" />
+          <header>
+            <h1>Ruchika Shashidhara</h1>
+            <p>
+              Software Engineering Graduate Student, Northeastern University
+            </p>
+            <i>Boston, USA</i>
+          </header>
+        </div>
+      </div>
+      <menu>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Certificates</a></li>
+        <li class="active"><a href="reachout.html">Reach Out</a></li>
+      </menu>
+
+      <h2>Reach out to me</h2>
+      <p>
+        If you have any queries about my work or you want to chat with me by
+        email, please fill out this reach out form, thanks!
+      </p>
+      <div class="container">
+        <form>
+          <div class="row">
+            <div class="label-col">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-col">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="label-col">
+              <label for="name">Email</label>
+            </div>
+            <div class="input-col">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="label-col">
+              <label for="country">Country</label>
+            </div>
+            <div class="input-col">
+              <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label-col">
+              <label for="subject">Email content</label>
+            </div>
+            <div class="input-col">
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Enter the content of the email"
+                style="height: 200px"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+
+      <br />
+
+      <footer><p>Portfolio @ Northeastern University</p></footer>
+    </div>
+  </body>
+</html>
