@@ -263,7 +263,7 @@ function onclickUpdate(buttonObject) {
   // Close the edit student record modal
   onclickCancel();
 
-  var h2Ref = buttonObject.previousElementSibling.previousElementSibling;
+  var h2Ref = buttonObject.previousElementSibling.previousElementSibling.previousElementSibling;
   setTimeout(function () {
     alert(
       "Student " + h2Ref.innerHTML.split(" ")[4] + " data updated successfully"

@@ -50,3 +50,8 @@ th {
   border: 1px solid #888;
   width: 50%;
 }
+
+.edit-input {
+  width: 100%;
+  margin-bottom: 10px;
+}
