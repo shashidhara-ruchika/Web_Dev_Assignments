@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-
-<!-- Also read chapter 9 from slides - Regular Expressions -->
-
 <html>
   <head>
     <title>Table CheckList</title>
@@ -121,6 +118,19 @@
       SUBMIT SELECTED AWARDS
     </button>
     <button id="add">Add New Student</button>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2>Edit Student Details</h2>
+        <p>Details:</p>
+        <button type="button" id="updateButton" onclick="onclickUpdate(this)">
+          Update
+        </button>
+        <button type="button" id="cancelButton" onclick="onclickCancel()">
+          Cancel
+        </button>
+      </div>
+    </div>
 
     <nav class="socialmediaicons"></nav>
     <script src="script.js"></script>

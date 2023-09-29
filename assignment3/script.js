@@ -111,7 +111,9 @@ function addNewRecord() {
   } catch (error) {
     alert(error);
   } finally {
-    alert(trStudentCell.innerHTML + " Record is added successfully");
+    setTimeout(function () {
+      alert(trStudentCell.innerHTML + " Record added successfully");
+    }, 300);
   }
 }
 
@@ -161,7 +163,7 @@ function onCheckBoxClick(checkbox) {
   if (checkbox.checked) {
     // Set Row's Background Color as Yellow
     rowSelect.style.backgroundColor = "Yellow";
-    
+
     // Add Delete Button
     var deleteButton = document.createElement("td");
     deleteButton.setAttribute("id", "deleted");
@@ -175,8 +177,8 @@ function onCheckBoxClick(checkbox) {
     editButton.innerHTML =
       '<button id="edit" type="button" onclick = "editRow(this)"> Edit </button>';
     rowSelect.appendChild(editButton);
-
-  } else { // On deselecting given row's checkbox
+  } else {
+    // On deselecting given row's checkbox
     // Reset Row's Background Color to White
     rowSelect.style.backgroundColor = "White";
     // Remove Edit Button
@@ -201,7 +203,7 @@ function deleteRow(rowObject) {
 
   count--;
 
-  // If any Delete button is not present, 
+  // If any Delete button is not present,
   // Remove Delete Column, Remove Edit Column, Disable Submit Selected Awards Button
   if (!document.getElementById("delete")) {
     removeDeleteEditColumnsDisableSubmitButton();
@@ -209,30 +211,62 @@ function deleteRow(rowObject) {
 
   var studentRef =
     rowObject.parentElement.parentElement.firstElementChild.nextElementSibling;
-  alert(studentRef.innerHTML + " Record deleted successfully");
+  setTimeout(function () {
+    alert(studentRef.innerHTML + " Record deleted successfully");
+  }, 300);
 }
 
-// Edit Student Record
+// Open the edit student record modal
 function editRow(rowObject) {
   var studentRef =
     rowObject.parentElement.parentElement.firstElementChild.nextElementSibling;
-  var editDeatils = prompt("Edit details of " + studentRef.innerHTML);
-  if (editDeatils != null) {
-    alert(
-      studentRef.innerHTML + " data: " + editDeatils + " is updated succesfully"
-    );
+
+  var modal = document.getElementById("myModal");
+
+  var h2Ref = modal.firstElementChild.firstElementChild;
+  h2Ref.innerHTML = "Edit Details of " + studentRef.innerHTML;
+
+  // Display current student row details
+  var pRef = h2Ref.nextElementSibling;
+  pRef.innerHTML = "| ";
+  var nextRef = studentRef;
+  for (let i = 0; i < 7; i++) {
+    pRef.innerHTML += nextRef.innerHTML + " | ";
+    nextRef = nextRef.nextElementSibling;
   }
+  // Show modal 
+  modal.style.display = "block";
 }
 
 // Remove Delete Column, Remove Edit Column, Disable Submit Selected Awards Button
 function removeDeleteEditColumnsDisableSubmitButton() {
   var table = document.getElementById("myTable");
   var headerRef = table.firstElementChild.firstElementChild;
-    // Remove Delete Column
-    headerRef.removeChild(document.getElementById("thDelete"));
-    // Remove Edit Column
-    headerRef.removeChild(document.getElementById("thEdit"));
-    // Disable Submit Selected Awards Button
-    var submitButtonRef = document.getElementById("button");
-    submitButtonRef.disabled = true;
+  // Remove Delete Column
+  headerRef.removeChild(document.getElementById("thDelete"));
+  // Remove Edit Column
+  headerRef.removeChild(document.getElementById("thEdit"));
+  // Disable Submit Selected Awards Button
+  var submitButtonRef = document.getElementById("button");
+  submitButtonRef.disabled = true;
+}
+
+// Close the edit student record modal
+function onclickCancel() {
+  var modal = document.getElementById("myModal");
+  // Remove modal
+  modal.style.display = "none";
+}
+
+// On click Update button edit student record modal
+function onclickUpdate(buttonObject) {
+  // Close the edit student record modal
+  onclickCancel();
+
+  var h2Ref = buttonObject.previousElementSibling.previousElementSibling;
+  setTimeout(function () {
+    alert(
+      "Student " + h2Ref.innerHTML.split(" ")[4] + " data updated successfully"
+    );
+  }, 300);
 }
