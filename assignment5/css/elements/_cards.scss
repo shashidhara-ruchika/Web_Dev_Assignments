@@ -1,0 +1,234 @@
+@import "../common/variables";
+@import "../common/mixins";
+@import "../common/functions";
+
+.card {
+  border: dotted rgba(0, 0, 0, 0.1);
+  border-radius: calculate-border-radius(8);
+  @include flex-container;
+  @include transition(all, $transition-duration);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.vertical {
+    flex-direction: column;
+    grid-row: span 2;
+    grid-column: span 1;
+
+    .card__img {
+      width: 100%;
+      border: 0px none;
+      border-radius: calculate-border-radius(8);
+    }
+
+    .card__time-to-read {
+      @extend %time-to-read-style;
+    }
+  }
+
+  &.horizontal {
+    flex-direction: row;
+    grid-row: span 1;
+    grid-column: span 2;
+
+    .card__img {
+      height: 100%;
+      border: 0px none;
+      border-radius: calculate-border-radius(8);
+    }
+
+    .card__time-to-read {
+      @extend %time-to-read-style;
+    }
+  }
+
+  .card__content {
+    padding: 16px;
+
+    .card__type {
+      font-variant: small-caps;
+      letter-spacing: 2px;
+      opacity: 0.9;
+      color: $primary-color;
+      @extend %padding-bottom;
+      font-weight: bold;
+    }
+
+    .card__title {
+      font-size: 18px;
+      opacity: 0.8;
+      font-weight: 700;
+      @extend %padding-bottom;
+      transition: all $transition-duration ease;
+    }
+
+    .card__date {
+      font-size: 14px;
+      @extend %padding-bottom;
+      opacity: 0.3;
+      font-weight: bold;
+    }
+
+    .card__time-to-read {
+      @extend %time-to-read-style;
+    }
+
+    .card__excerpt {
+      font-size: 16px;
+      @extend %padding-bottom;
+    }
+
+    .card__tags {
+      margin-top: auto;
+    }
+  }
+
+  &.article1-card {
+    border: dotted rgba(0, 0, 0, 0.1);
+    border-radius: calculate-border-radius(8);
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+    grid-column: span 1;
+    width: 100%;
+
+    .card__img {
+      width: 100%;
+      border: 0px none;
+      border-radius: calculate-border-radius(8);
+    }
+
+    .card__content {
+      padding: 16px;
+      flex: 1;
+
+      .card__type {
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        opacity: 0.9;
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+
+      .card__title {
+        font-size: 18px;
+        opacity: 0.8;
+        font-weight: 700;
+        transition: all $transition-duration ease;
+        margin-bottom: 0.5em;
+      }
+
+      .card__date {
+        font-size: 14px;
+        opacity: 0.3;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+
+      .card__time-to-read {
+        @extend %time-to-read-style;
+      }
+
+      .card__excerpt {
+        font-size: 16px;
+        margin-bottom: 0.5em;
+      }
+
+      .card__tags {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+%time-to-read-style {
+  font-style: italic;
+  font-weight: bold;
+}
+
+%padding-bottom {
+  padding-bottom: 0.5em;
+}
+
+.related-articles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
+.related-article {
+  width: calc(33.33% - 20px);
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .card {
+    border: dotted rgba(0, 0, 0, 0.1);
+    border-radius: calculate-border-radius(8);
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+    grid-column: span 1;
+    width: 100%;
+
+    .card__img {
+      width: 100%;
+      border: 0px none;
+      border-radius: calculate-border-radius(8);
+    }
+
+    .card__content {
+      padding: 16px;
+      flex: 1;
+
+      .card__type {
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        opacity: 0.9;
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+
+      .card__title {
+        font-size: 18px;
+        opacity: 0.8;
+        font-weight: 700;
+        transition: all $transition-duration ease;
+        margin-bottom: 0.5em;
+      }
+
+      .card__date {
+        font-size: 14px;
+        opacity: 0.3;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+
+      .card__time-to-read {
+        @extend %time-to-read-style;
+      }
+
+      .card__excerpt {
+        font-size: 16px;
+        margin-bottom: 0.5em;
+      }
+
+      .card__tags {
+        margin-top: auto;
+      }
+    }
+  }
+}

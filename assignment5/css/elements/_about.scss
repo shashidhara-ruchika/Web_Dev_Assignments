@@ -1,0 +1,14 @@
+.about-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+}

@@ -1,0 +1,72 @@
+@import "../common/functions";
+@import "../common/mixins";
+@import "../common/variables";
+
+* {
+  @include apply-font-family("sans-serif, Arial");
+  box-sizing: border-box;
+}
+
+header {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 1rem;
+  border: 0px none;
+  border-radius: calculate-border-radius(8);
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+
+      li {
+        display: inline;
+        margin-right: 1rem;
+
+        a {
+          text-decoration: none;
+          color: $primary-color;
+          font-weight: bold;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+body {
+  background-image: generate-gradient(
+    var(--background-gradient-start),
+    var(--background-gradient-end)
+  );
+}
+
+.container {
+  max-width: 948px;
+  margin: 4em auto;
+  padding: 4em;
+  background: #fff;
+  border-radius: 1em;
+}
+
+footer {
+  background-color: $secondary-color;
+  color: var(--background-gradient-start);
+  padding: 1rem;
+  border: 0px none;
+  border-radius: calculate-border-radius(8);
+  align-items: center;
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+}

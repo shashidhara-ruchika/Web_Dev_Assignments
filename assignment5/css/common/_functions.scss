@@ -1,0 +1,7 @@
+@function calculate-border-radius($radius) {
+  @return #{$radius}px;
+}
+
+@function generate-gradient($start-color, $end-color) {
+  @return unquote("linear-gradient(to top, #{$start-color}, #{$end-color});");
+}

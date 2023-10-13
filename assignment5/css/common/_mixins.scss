@@ -1,0 +1,19 @@
+@mixin flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin transition($properties, $duration) {
+  transition: $properties $duration ease;
+}
+
+@mixin apply-font-family($family) {
+  font-family: #{$family};
+}

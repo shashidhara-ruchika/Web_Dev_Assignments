@@ -1,0 +1,14 @@
+@import "theme/theme";
+@import "elements/cards";
+@import "elements/tags";
+@import "elements/about";
+@import "elements/service";
+
+section.cards {
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 16px;
+}

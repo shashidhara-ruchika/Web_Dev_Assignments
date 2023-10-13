@@ -1,0 +1,46 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.tag {
+  display: inline;
+  background: $secondary-color;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 12px;
+  color: $primary-color;
+  user-select: none;
+  cursor: pointer;
+  @include text-ellipsis;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      font-style: bold;
+    }
+  }
+
+  &:hover {
+    background: darken($secondary-color, 5%);
+  }
+
+  &:active {
+    background: darken($secondary-color, 10%);
+  }
+
+  i {
+    margin-right: 4px;
+  }
+
+  button {
+    all: unset;
+
+    &:focus {
+      outline: revert;
+    }
+  }
+}
