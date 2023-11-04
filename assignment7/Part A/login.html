@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="login.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="email" onkeyup="validateEmail()" placeholder="user@northeastern.edu" />
+      <div class="error" id="email-error"></div>
+
+      <label for="username">User Name: </label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        onkeyup="validateUsername()"
+        placeholder="username"
+      />
+      <div class="error" id="username-error"></div>
+
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        onkeyup="validatePassword()"
+        placeholder="password"
+      />
+      <div class="error" id="password-error"></div>
+
+      <label for="confirm-password">Confirm Password: </label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        onkeyup="validateConfirmPassword()"
+        placeholder="password"
+      />
+      <div class="error" id="confirm-password-error"></div>
+
+      <button id="login-button" disabled>Login</button>
+      <div id="error-message" class="error"></div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

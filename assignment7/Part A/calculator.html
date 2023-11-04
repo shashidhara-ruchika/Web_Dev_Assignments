@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="calculator.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <label id="main-label">Simple Calculator</label>
+
+      <div class="card">
+        <div class="input-container">
+          <label class="input-label">Number 1:</label>
+          <div class="input-field">
+            <input
+              type="text"
+              id="number1"
+              placeholder="Enter number 1"
+              onkeyup="validateInput(this.value, 'number1-error')"
+            />
+            <div class="error-message" id="number1-error"></div>
+          </div>
+        </div>
+        <br />
+        <div class="input-container">
+          <label class="input-label">Number 2:</label>
+          <div class="input-field">
+            <input
+              type="text"
+              id="number2"
+              placeholder="Enter number 2"
+              onkeyup="validateInput(this.value, 'number2-error')"
+            />
+            <div class="error-message" id="number2-error"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="add-button" onclick="performOperation('add')">
+          Add
+        </button>
+        <button id="subtract-button" onclick="performOperation('subtract')">
+          Subtract
+        </button>
+        <button id="multiply-button" onclick="performOperation('multiply')">
+          Multiply
+        </button>
+        <button id="divide-button" onclick="performOperation('divide')">
+          Divide
+        </button>
+      </div>
+
+      <div class="result-card">
+        <div class="input-container">
+          <label class="input-label">Result:</label>
+          <div class="input-field">
+            <input type="text" id="result" readonly />
+            <div class="error-message" id="result-error"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>

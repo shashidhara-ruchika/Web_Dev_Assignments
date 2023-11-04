@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stopwatch</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="stopwatch.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <label id="main-label">Simple Stopwatch</label>
+
+      <div class="card" id="date-card">
+        <input type="text" id="date-picker" readonly />
+      </div>
+
+      <div class="card" id="time-card">
+        <span id="time-display">00:00:00</span>
+        <div id="button-container">
+          <button id="start-button">Start</button>
+          <button id="stop-button">Stop</button>
+          <button id="reset-button">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="stopwatch.js"></script>
+  </body>
+</html>
