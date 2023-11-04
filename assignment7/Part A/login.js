@@ -1,27 +1,26 @@
 const validateEmail = () => {
-    const email = $("#email").val();
-    const emailErrorElement = $("#email-error");
-    emailErrorElement.empty().hide();
-  
-    if (email.trim() === "") {
-      emailErrorElement.text("This field is required").show();
-    } else if (email.length > 50) {
-      emailErrorElement
-        .text("This field should have a maximum of 50 characters")
-        .show();
-    } else if (!email.endsWith("@northeastern.edu")) {
-      emailErrorElement.text("This field must end with @northeastern.edu").show();
-    } else if (email.length < 18) {
-      emailErrorElement.text("This field must end with @northeastern.edu").show();
-    } else if (!/^[a-zA-Z]/.test(email)) {
-      emailErrorElement.text("This field must start with a letter").show();
-    } else {
-      emailErrorElement.hide();
-    }
-  
-    validateForm();
-  };
-  
+  const email = $("#email").val();
+  const emailErrorElement = $("#email-error");
+  emailErrorElement.empty().hide();
+
+  if (email.trim() === "") {
+    emailErrorElement.text("This field is required").show();
+  } else if (email.length > 50) {
+    emailErrorElement
+      .text("This field should have a maximum of 50 characters")
+      .show();
+  } else if (!email.endsWith("@northeastern.edu")) {
+    emailErrorElement.text("This field must end with @northeastern.edu").show();
+  } else if (email.length < 18) {
+    emailErrorElement.text("This field must end with @northeastern.edu").show();
+  } else if (!/^[a-zA-Z]/.test(email)) {
+    emailErrorElement.text("This field must start with a letter").show();
+  } else {
+    emailErrorElement.hide();
+  }
+
+  validateForm();
+};
 
 const validateUsername = () => {
   const username = $("#username").val();
@@ -31,10 +30,11 @@ const validateUsername = () => {
   if (username.trim() === "") {
     usernameErrorElement.text("This field is required").show();
   } else {
-    const usernameRegex =
-      /^[a-zA-Z0-9@_\-\.]{3,20}$/;
+    const usernameRegex = /^[a-zA-Z0-9@_\-\.]{3,20}$/;
     if (!username.match(usernameRegex)) {
-      usernameErrorElement.text("This field can contain only letters, numbers, @, _, - and .").show();
+      usernameErrorElement
+        .text("This field can contain only letters, numbers, @, _, - and .")
+        .show();
     } else if (username.length < 3) {
       usernameErrorElement
         .text("This field should have a minimum of 3 characters")
@@ -132,6 +132,8 @@ $("#login-button").click(() => {
     $("#password-error").text() === "" &&
     $("#confirm-password-error").text() === ""
   ) {
+    const username = $("#username").val();
+    localStorage.setItem("username", username);
     window.location.href = "calculator.html";
   } else {
     $("#error-message").text("Please fix the errors in the form.");

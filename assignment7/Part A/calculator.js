@@ -1,3 +1,9 @@
+const username = localStorage.getItem("username");
+
+if (username) {
+  $("#main-label").text(`Simple Calculator - Welcome, ${username}`);
+}
+
 const isValidNum = (value) => {
   return !isNaN(value) && isFinite(value);
 };
