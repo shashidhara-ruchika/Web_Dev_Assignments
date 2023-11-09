@@ -1,0 +1,30 @@
+###
+
+GET http://localhost:3000/user/getAll
+
+###
+
+POST http://localhost:3000/user/create
+Content-Type: application/json
+
+{
+    "name" : "Ruchika Shashidhara",
+    "email": "rs@northeastern.edu",
+    "password": "Qwerty@123"
+}
+
+###
+
+PUT http://localhost:3000/user/edit?email=rs@northeastern.edu
+Content-Type: application/json
+
+{
+    "name" : "Ruch jlkskejvn",
+    "password": "Qwerty@123566"
+}
+
+###
+
+DELETE http://localhost:3000/user/delete?email=rs1@northeastern.edu
+
+###
