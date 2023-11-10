@@ -35,7 +35,8 @@ router.post('/create', async (req, res) => {
 
     try {
         const newUser = await user.save()
-        res.status(201).json(newUser)
+        const newUserDAO = mapUsertoDAO(newUser)
+        res.status(201).json(newUserDAO)
     } catch(error) {
         res.status(500).json({ message: error.message })
     }
@@ -61,7 +62,8 @@ router.put('/edit', getUser, async (req, res) => {
 
     try {
         const updatedUser = await res.user.save()
-        res.json(updatedUser)
+        const updatedUserDAO = mapUsertoDAO(updatedUser)
+        res.json(updatedUserDAO)
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
@@ -107,7 +109,16 @@ async function deleteUser(email) {
 
 async function getAllUsers() {
     const users = await User.find()
-    return { size: users.length, users: users }
+    const usersDAO = users.map(mapUsertoDAO)
+    return { size: users.length, users: usersDAO }
+}
+
+function mapUsertoDAO(user) {
+    return {
+        name: user.name,
+        email: user.email,
+        password: user.password 
+    }
 }
 
 async function getHash(str) {
@@ -115,7 +126,7 @@ async function getHash(str) {
 }
 
 function isValidName(name) {
-    return testRegex(/^(\w{3,}(?:\s{1}\w{3,})*|\w{3,})$/, name)
+    return testRegex(/^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/, name)
 }
 
 function isValidPassword(password) {
@@ -127,12 +138,36 @@ function isValidEmail(email) {
 }
 
 async function hasValidUserFields(email, name, password, res) {
+    if (email == null) {
+        res.status(400).json({ message: "Email required" })
+        return false
+    }
+    if (email.length > 60) {
+        res.status(400).json({ message: "Email is too long" })
+        return false
+    }
     if (!isValidEmail(email)) {
         res.status(400).json({ message: "Email validation failed" })
         return false
     }
+    if (name == null) {
+        res.status(400).json({ message: "Name required" })
+        return false
+    }
+    if (name.length > 60) {
+        res.status(400).json({ message: "Name is too long" })
+        return false
+    }
     if (!isValidName(name)) {
         res.status(400).json({ message: "Name validation failed" })
+        return false
+    }
+    if (password == null) {
+        res.status(400).json({ message: "Password required" })
+        return false
+    }
+    if (password.length > 60) {
+        res.status(400).json({ message: "Password is too long" })
         return false
     }
     if (!isValidPassword(password)) {

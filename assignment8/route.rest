@@ -8,9 +8,9 @@ POST http://localhost:3000/user/create
 Content-Type: application/json
 
 {
-    "name" : "Ruchika Shashidhara",
-    "email": "rs@northeastern.edu",
-    "password": "Qwerty@123"
+    "name" : "Yujjk Ljbhkljsbvjesbvljsrb",
+    "email" : "ulk@northeastern.edu",
+    "password": "werHtjshvhy@123"
 }
 
 ###
@@ -25,6 +25,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/user/delete?email=rs1@northeastern.edu
+DELETE http://localhost:3000/user/delete?email=rs@northeastern.edu
 
 ###
+
