@@ -8,24 +8,24 @@ POST http://localhost:3000/user/create
 Content-Type: application/json
 
 {
-    "name" : "Yujjk Ljbhkljsbvjesbvljsrb",
-    "email" : "ulk@northeastern.edu",
-    "password": "werHtjshvhy@123"
+    "name" : "Nagalekha Ramesh",
+    "email" : "ramesh.na@northeastern.edu",
+    "password": "QWERTYa@123"
 }
 
 ###
 
-PUT http://localhost:3000/user/edit?email=rs@northeastern.edu
+PUT http://localhost:3000/user/edit?email=keshava.ke@northeastern.edu
 Content-Type: application/json
 
 {
-    "name" : "Ruch jlkskejvn",
-    "password": "Qwerty@123566"
+    "name": "Ruchika Shashidhara",
+    "email": "ramesh.na@north.edu"
 }
 
 ###
 
-DELETE http://localhost:3000/user/delete?email=rs@northeastern.edu
+DELETE http://localhost:3000/user/delete?email=ruchi@northeastern.edu
 
 ###
 
