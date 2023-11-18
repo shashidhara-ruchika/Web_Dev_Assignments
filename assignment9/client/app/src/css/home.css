@@ -1,0 +1,17 @@
+.home-card {
+    display: flex;
+    background: url('../assests/background.png') right center no-repeat fixed;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  
+  /* .card {
+    flex: 1;
+    max-width: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card-body {
+    padding: 40px;
+  }
+   */
