@@ -23,7 +23,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    - Bootstrap's grid system for responsive design.
 
 ## Folder Hierarchy
+![Client](https://github.com/shashidhara-ruchika/INFO6150_Shashidhara_Ruchika_002245068/assets/144740650/211ea63d-a74a-403c-9ba8-7a3308fbcac0)
 
+![Server](https://github.com/shashidhara-ruchika/INFO6150_Shashidhara_Ruchika_002245068/assets/144740650/fc00fc96-5787-4714-b22b-64d03b18e4af)
 
 ## How to Run the Project
 
