@@ -24,7 +24,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Folder Hierarchy
 
-The project follows a structured REST API folder hierarchy for better organization.
 
 ## How to Run the Project
 
