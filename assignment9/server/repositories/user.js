@@ -1,5 +1,5 @@
 const User = require('../models/user')
-const { mapUsertoDAO } = require('../mappers/mapper')
+const { mapUsertoDAO } = require('../services/common/mapper')
 
 findUserByEmail = async (email) => {
     return await User.findOne({ email: email })

@@ -1,4 +1,4 @@
-const { UserInputError } = require("../errors/errors")
+const { UserInputError } = require("../../errors/errors")
 
 testRegex = (pattern, str) => {
     return pattern.test(str)

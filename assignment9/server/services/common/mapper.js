@@ -4,7 +4,7 @@ module.exports = {
         return {
             name: user.name,
             email: user.email,
-            password: user.password 
+            // password: user.password 
         }
 
     }

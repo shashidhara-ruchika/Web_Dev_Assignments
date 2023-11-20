@@ -31,7 +31,7 @@ export default function HomeCard() {
             <div>
               <strong>Welcome to Your Next Career Move!</strong> Discover
               exciting job opportunities tailored to your skills and
-              aspirations. Your dream career is just a click away.
+              aspirations.
             </div>
 
             <div>
@@ -83,6 +83,7 @@ export default function HomeCard() {
             <a href="/jobs" className="btn btn-primary">
               Search Jobs
             </a>
+            <br/>
           </div>
         </div>
       </div>

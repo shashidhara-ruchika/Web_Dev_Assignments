@@ -1,5 +1,5 @@
 const { UserDoesNotExist, UserAlreadyExists } = require('../errors/errors')
-const { mapUsertoDAO } = require('../mappers/mapper')
+const { mapUsertoDAO } = require('./common/mapper')
 const { findUserByEmail, deleteUserByEmail, findAllUsers, saveOrUpdateUser } = require('../repositories/user')
 const { generateHash } = require('./hash')
 const User = require('../models/user')

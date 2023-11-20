@@ -25,11 +25,19 @@ class UserAlreadyExists extends Error {
      }
 }
 
-
+class InvalidCredentials extends Error {
+     constructor(message) {
+          super(message)
+     }
+     get name() {
+          return "InvalidCredentials"
+     }
+}
 
 
 module.exports = { 
      UserDoesNotExist,
      UserInputError,
-     UserAlreadyExists
+     UserAlreadyExists,
+     InvalidCredentials
 }

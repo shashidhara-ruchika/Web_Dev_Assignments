@@ -1,30 +1,47 @@
 ###
 
-GET http://localhost:3000/user/getAll
+GET http://localhost:8000/user/getAll
 
 ###
 
-POST http://localhost:3000/user/create
+POST http://localhost:8000/user/create
 Content-Type: application/json
 
 {
     "name" : "Ruchika Shashidhara",
-    "email" : "ruchika@northeastern.edu",
+    "email" : "ruchika12@northeastern.edu",
     "password": "QWERTYa@123"
 }
 
 ###
 
-PUT http://localhost:3000/user/edit?email=ruchika@northeastern.edu
+PUT http://localhost:8000/user/edit?email=ruchika@northeastern.edu
 Content-Type: application/json
 
 {
-    "name": "Ruchika Shashidhara"
+    "name": "Ruchika",
+    "password": "Ruchika@456"
 }
 
 ###
 
-DELETE http://localhost:3000/user/delete?email=ruchika@northeastern.edu
+DELETE http://localhost:8000/user/delete?email=ruchika@northeastern.edu
 
 ###
 
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "email": "ruchika@northeastern.edu",
+    "password": "Ruchika@456"
+}
+
+###
+
+POST http://localhost:8000/auth/logout
+Content-Type: application/json
+
+{
+    
+}

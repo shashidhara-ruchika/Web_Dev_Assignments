@@ -6,6 +6,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    localStorage.removeItem("token")
     navigate('/');
   };
 
@@ -43,7 +44,7 @@ export default function Header() {
           </div>
 
           <div className="navbar-nav ms-auto">
-            <button className="btn btn-outline-light" onClick={handleLogout}>
+            <button className="btn" onClick={handleLogout}>
               Logout
             </button>
           </div>
