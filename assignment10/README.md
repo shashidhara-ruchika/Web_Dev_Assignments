@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a weather app built using React. It provides current weather information and a forecast for a specific city. The app uses the OpenWeatherMap API to fetch weather data.
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+### 1. AreaTime
 
-### `npm start`
+- File: `AreaTime.js`
+- Description: Displays the city name and country for the current weather.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Forecast
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- File: `Forecast.js`
+- Description: Displays the forecast for a specific day, including temperature highs and lows, and an icon representing the weather.
 
-### `npm test`
+### 3. HourlyForecast
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- File: `HourlyForecast.js`
+- Description: Organizes the forecast into hourly segments, displaying the temperature highs and lows for each hour.
 
-### `npm run build`
+### 4. Input
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- File: `Input.js`
+- Description: Provides a search input to allow users to search for weather information for a specific city.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. Temperature
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- File: `Temperature.js`
+- Description: Displays the current temperature, a brief description of the weather, and temperature highs and lows.
 
-### `npm run eject`
+## Services
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. weather.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- File: `weather.js`
+- Description: Contains functions to fetch weather data from the OpenWeatherMap API, format the data, and find the timezone based on latitude and longitude.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## App
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. App
 
-## Learn More
+- File: `App.js`
+- Description: The main component that integrates all the other components. It includes the main layout, input search, current weather display, daily forecast, and hourly forecast.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. tailwind.css
 
-### Code Splitting
+- File: `tailwind.css`
+- Description: CSS file using Tailwind CSS for styling the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Additional Files
 
-### Analyzing the Bundle Size
+### 1. fonts.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- File: `fonts.css`
+- Description: Imports the 'Poppins' font from Google Fonts.
 
-### Making a Progressive Web App
+### 2. API Key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Description: The OpenWeatherMap API key is used for accessing weather data. It is recommended to keep the API key secure and not expose it in public repositories.
 
-### Advanced Configuration
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Install dependencies using `npm install`.
+2. Replace the placeholder API key in `weather.js` with your OpenWeatherMap API key.
+3. Run the app using `npm start`.
 
-### Deployment
+Note: Make sure to comply with OpenWeatherMap's usage policies and terms.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Tailwind CSS Configuration
 
-### `npm run build` fails to minify
+### 1. tailwind.config.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- File: `tailwind.config.js`
+- Description: Configuration file for Tailwind CSS, extending its default settings.
+
+## Font Configuration
+
+### 1. fonts.css
+
+- File: `fonts.css`
+- Description: Imports the 'Poppins' font from Google Fonts to be used throughout the application.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Feel free to customize, enhance, and deploy this weather app as per your requirements!
